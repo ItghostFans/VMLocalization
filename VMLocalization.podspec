@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = 'VMLocalization'
   s.version          = '0.1.0'
-  s.summary          = 'A short description of VMLocalization.'
+  s.summary          = 'VMLocalization is a kit that providing normal solution avoiding localization problem.'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -24,19 +24,22 @@ TODO: Add long description of the pod here.
   s.homepage         = 'https://github.com/ItghostFans/VMLocalization'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'ItghostFans' => 'fanchunxing1@joyy.com' }
+  s.author           = { 'ItghostFans' => 'ItghostFans@gmail.com' }
   s.source           = { :git => 'https://github.com/ItghostFans/VMLocalization.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
-  s.ios.deployment_target = '10.0'
+  s.ios.deployment_target = '13.0'
 
   s.source_files = 'VMLocalization/Classes/**/*'
+  s.private_header_files = 'VMLocalization/Private/**/*.h'
+  s.preserve_paths = '**'
   
   # s.resource_bundles = {
   #   'VMLocalization' => ['VMLocalization/Assets/*.png']
   # }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
+   s.frameworks = 'UIKit', 'Foundation'
+   s.dependency 'Masonry'
   # s.dependency 'AFNetworking', '~> 2.3'
 end

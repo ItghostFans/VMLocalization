@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -38,7 +38,7 @@
 
 /* Begin PBXFileReference section */
 		0977218A63C76C319ABE9C51 /* Pods_VMLocalization_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VMLocalization_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		40C6525DCD31601F8E997B93 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		40C6525DCD31601F8E997B93 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		4BD8F4C34FB5D2C91542B1A6 /* Pods-VMLocalization_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VMLocalization_Example.release.xcconfig"; path = "Target Support Files/Pods-VMLocalization_Example/Pods-VMLocalization_Example.release.xcconfig"; sourceTree = "<group>"; };
 		51C3929CB07CBB13AE3AF7C7 /* Pods-VMLocalization_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VMLocalization_Tests.release.xcconfig"; path = "Target Support Files/Pods-VMLocalization_Tests/Pods-VMLocalization_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		6003F58A195388D20070C39A /* VMLocalization_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VMLocalization_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -62,11 +62,11 @@
 		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
 		71719F9E1E33DC2100824A3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		89034D81F01121B50F36D14B /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		89034D81F01121B50F36D14B /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		9117A3B9F60A61C02383ECBC /* Pods_VMLocalization_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VMLocalization_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B0B1DE49602B9C643F44FC4 /* Pods-VMLocalization_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VMLocalization_Example.debug.xcconfig"; path = "Target Support Files/Pods-VMLocalization_Example/Pods-VMLocalization_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		CBFBC9A00DFEE64452C22D50 /* Pods-VMLocalization_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VMLocalization_Tests.debug.xcconfig"; path = "Target Support Files/Pods-VMLocalization_Tests/Pods-VMLocalization_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		ED717668111FC1D14507F39E /* VMLocalization.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = VMLocalization.podspec; path = ../VMLocalization.podspec; sourceTree = "<group>"; };
+		ED717668111FC1D14507F39E /* VMLocalization.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = VMLocalization.podspec; path = ../VMLocalization.podspec; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -193,7 +193,6 @@
 				CBFBC9A00DFEE64452C22D50 /* Pods-VMLocalization_Tests.debug.xcconfig */,
 				51C3929CB07CBB13AE3AF7C7 /* Pods-VMLocalization_Tests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -245,7 +244,7 @@
 		6003F582195388D10070C39A /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				CLASSPREFIX = VM;
+				CLASSPREFIX = "";
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = ItghostFans;
 				TargetAttributes = {
@@ -255,10 +254,11 @@
 				};
 			};
 			buildConfigurationList = 6003F585195388D10070C39A /* Build configuration list for PBXProject "VMLocalization" */;
-			compatibilityVersion = "Xcode 3.2";
+			compatibilityVersion = "Xcode 12.0";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -347,10 +347,12 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-VMLocalization_Example/Pods-VMLocalization_Example-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
 				"${BUILT_PRODUCTS_DIR}/VMLocalization/VMLocalization.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/VMLocalization.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -474,7 +476,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -507,7 +509,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -522,6 +524,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "VMLocalization/VMLocalization-Prefix.pch";
 				INFOPLIST_FILE = "VMLocalization/VMLocalization-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -538,6 +541,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "VMLocalization/VMLocalization-Prefix.pch";
 				INFOPLIST_FILE = "VMLocalization/VMLocalization-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -563,6 +567,7 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = "Tests/Tests-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -584,6 +589,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Tests/Tests-Prefix.pch";
 				INFOPLIST_FILE = "Tests/Tests-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
