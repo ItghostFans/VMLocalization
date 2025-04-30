@@ -17,3 +17,10 @@ UIKIT_STATIC_INLINE UIEdgeInsets UIDirectionalEdgesInsetsMake(CGFloat top, CGFlo
     }
     return insets;
 }
+
+UIKIT_STATIC_INLINE CGRect UIRectFlip(CGRect rect, CGRect parent) {
+    if ([UIView userInterfaceLayoutDirectionForSemanticContentAttribute:UIView.appearance.semanticContentAttribute] == UIUserInterfaceLayoutDirectionRightToLeft) {
+        rect.origin.x = CGRectGetWidth(parent) - CGRectGetMinX(rect) - CGRectGetWidth(rect);
+    }
+    return rect;
+}
